@@ -163,6 +163,10 @@ nav {
   -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
 }
 .nav-logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.nav-logo .gradient-text {
+  background: linear-gradient(135deg, #5b4cff 0%, #2dd4b8 50%, #a86bef 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
 
 /* Hamburger Button */
 .hamburger {
@@ -297,9 +301,9 @@ nav {
 }
 .about-problem { margin-bottom: 40px; }
 .about-story1 h3 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   color: #fff;
   text-align: center;
 }
@@ -307,14 +311,14 @@ nav {
   font-size: 1.05rem;
   line-height: 1.8;
   color: rgba(255,255,255,0.55);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   text-align: center;
 }
 .about-story1 p:last-child { margin-bottom: 0; }
 .about-story1 strong { color: rgba(255,255,255,0.85); }
 
 .about-story2 h3 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 16px;
   color: #fff;
