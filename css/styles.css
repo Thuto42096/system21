@@ -98,6 +98,45 @@ body {
   pointer-events: none;
 }
 
+/* ─── SHIMMER BORDER EFFECT ─── */
+.glass-card::after,
+.nav-inner::after,
+.footer-inner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255,255,255,0.5) 45%,
+    rgba(91,76,255,0.6) 50%,
+    rgba(45,212,184,0.5) 55%,
+    transparent 65%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: shimmer-border 4s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Stagger the animations for visual interest */
+.glass-card:nth-child(2)::after { animation-delay: 1.3s; }
+.glass-card:nth-child(3)::after { animation-delay: 2.6s; }
+.footer-inner::after { animation-delay: 0.5s; }
+
+@keyframes shimmer-border {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 /* ─── LAYOUT ─── */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 section { position: relative; z-index: 1; }
@@ -234,6 +273,131 @@ nav {
 .hero-cta span { position: relative; z-index: 1; }
 .hero-cta svg { position: relative; z-index: 1; }
 
+/* ─── ABOUT SECTION ─── */
+.about {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* Story card - the main glass panel */
+.about-story1 {
+  padding: 48px 56px;
+  margin-bottom: 64px;
+  position: relative;
+  z-index: 1;
+}
+.about-story2 {
+  padding: 48px 56px;
+  margin-bottom: 64px;
+  position: relative;
+  z-index: 1;
+}
+.about-problem { margin-bottom: 40px; }
+.about-story1 h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+  text-align: center;
+}
+.about-story1 p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.about-story1 p:last-child { margin-bottom: 0; }
+.about-story1 strong { color: rgba(255,255,255,0.85); }
+
+.about-story2 h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+  text-align: center;
+  
+}
+.about-story2 p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.about-story2 p:last-child { margin-bottom: 0; }
+.about-story2 strong { color: rgba(255,255,255,0.85); }
+
+/* Why Choose heading */
+.about-why-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* Three pillars grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+.about-card {
+  padding: 36px 32px;
+  text-align: center;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s;
+}
+.about-card:hover { transform: translateY(-6px); }
+.about-card:nth-child(1):hover { box-shadow: 0 8px 48px rgba(91,76,255,0.15); }
+.about-card:nth-child(2):hover { box-shadow: 0 8px 48px rgba(45,212,184,0.15); }
+.about-card:nth-child(3):hover { box-shadow: 0 8px 48px rgba(168,107,239,0.15); }
+
+.about-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+.about-icon--speed {
+  background: rgba(91,76,255,0.15);
+  box-shadow: 0 0 24px rgba(91,76,255,0.2);
+  color: #5b4cff;
+}
+.about-icon--design {
+  background: rgba(45,212,184,0.15);
+  box-shadow: 0 0 24px rgba(45,212,184,0.2);
+  color: #2dd4b8;
+}
+.about-icon--human {
+  background: rgba(168,107,239,0.15);
+  box-shadow: 0 0 24px rgba(168,107,239,0.2);
+  color: #a86bef;
+}
+
+.about-card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.about-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+}
+.about-card strong { color: rgba(255,255,255,0.75); }
+
 /* ─── SERVICES ─── */
 .services { padding: 120px 0; }
 .section-label {
@@ -311,8 +475,15 @@ nav {
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 768px) {
+  /* About Section */
+  .about-story { padding: 32px 24px; }
+  .about-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .about-bg-21 { font-size: 200px; }
+
+  /* Services */
   .services-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
 
+  /* Footer */
   .footer-top { flex-direction: column; gap: 20px; text-align: center; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
 }
