@@ -261,8 +261,9 @@ nav {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 18px 42px; border-radius: 16px; font-size: 1rem; font-weight: 600;
   color: #fff; letter-spacing: 0.04em; cursor: pointer;
+  text-decoration: none; /* For anchor tag */
   background: rgba(91,76,255,0.2); border: 1px solid rgba(91,76,255,0.4);
-  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative; overflow: hidden;
 }
