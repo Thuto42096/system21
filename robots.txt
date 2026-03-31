@@ -1,11 +1,11 @@
 # robots.txt for System21
-# https://system21.dev
+# https://system21.co.za
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://system21.dev/sitemap.xml
+Sitemap: https://system21.co.za/sitemap.xml
 
 # Disallow admin or private areas (add as needed)
 # Disallow: /admin/
