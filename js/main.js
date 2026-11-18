@@ -58,14 +58,14 @@ if (heroTitle && !reducedMotion) {
 
 // ─── SCROLL REVEAL ───
 const revealTargets = document.querySelectorAll(
-  '.section-label, .section-title, .packages-subtitle, .glass-card, .about-why-title, .process-title, .packages-note, .marquee-wrapper, .footer-inner'
+  '.section-label, .section-title, .section-subtitle, .card, .about-why-title, .process-title, .packages-note, .marquee-wrapper, .footer-inner'
 );
 revealTargets.forEach(el => el.classList.add('reveal'));
 
 if ('IntersectionObserver' in window && !reducedMotion) {
   // Stagger siblings inside grids
-  document.querySelectorAll('.about-grid, .process-grid, .services-grid, .packages-grid').forEach(grid => {
-    [...grid.children].forEach((card, i) => { card.style.transitionDelay = `${i * 0.1}s`; });
+  document.querySelectorAll('.about-grid, .about-stories, .process-grid, .services-grid, .packages-grid').forEach(grid => {
+    [...grid.children].forEach((card, i) => { card.style.transitionDelay = `${i * 0.08}s`; });
   });
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -74,7 +74,7 @@ if ('IntersectionObserver' in window && !reducedMotion) {
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
   revealTargets.forEach(el => revealObserver.observe(el));
 } else {
   revealTargets.forEach(el => el.classList.add('reveal-in'));
@@ -91,26 +91,3 @@ window.addEventListener('scroll', () => {
   }
   lastY = y;
 }, { passive: true });
-
-// ─── 3D TILT ON CARDS (desktop / fine pointers only) ───
-if (window.matchMedia('(pointer: fine)').matches && !reducedMotion) {
-  document.querySelectorAll('.about-card, .process-card, .service-card, .package-card').forEach(card => {
-    let raf = null;
-    card.addEventListener('pointermove', (e) => {
-      if (raf) return;
-      raf = requestAnimationFrame(() => {
-        const r = card.getBoundingClientRect();
-        const px = (e.clientX - r.left) / r.width - 0.5;
-        const py = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = `perspective(900px) rotateX(${-py * 6}deg) rotateY(${px * 6}deg) translateY(-6px)`;
-        card.style.setProperty('--glow-x', `${(px + 0.5) * 100}%`);
-        card.style.setProperty('--glow-y', `${(py + 0.5) * 100}%`);
-        raf = null;
-      });
-    });
-    card.addEventListener('pointerleave', () => {
-      if (raf) { cancelAnimationFrame(raf); raf = null; }
-      card.style.transform = '';
-    });
-  });
-}

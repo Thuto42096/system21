@@ -13,8 +13,8 @@
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', -apple-system, sans-serif;
-      background: #08080c;
-      color: #fff;
+      background: #0b0b10;
+      color: #f0f0f2;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -26,32 +26,29 @@
     .error-code {
       font-size: clamp(6rem, 20vw, 10rem);
       font-weight: 800;
-      background: linear-gradient(135deg, #5b4cff 0%, #2dd4b8 50%, #a86bef 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #4f6df5;
       line-height: 1;
       margin-bottom: 16px;
     }
     h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 16px; }
-    p { color: rgba(255,255,255,0.5); margin-bottom: 32px; line-height: 1.6; }
+    p { color: rgba(255,255,255,0.45); margin-bottom: 32px; line-height: 1.6; }
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 14px 32px;
-      border-radius: 12px;
+      border-radius: 10px;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 550;
       color: #fff;
       text-decoration: none;
-      background: rgba(91,76,255,0.2);
-      border: 1px solid rgba(91,76,255,0.4);
-      transition: all 0.3s;
+      background: #4f6df5;
+      border: none;
+      transition: all 0.25s;
     }
     .btn:hover {
-      background: rgba(91,76,255,0.35);
-      box-shadow: 0 0 24px rgba(91,76,255,0.3);
+      background: #5d7af7;
+      box-shadow: 0 4px 20px rgba(79,109,245,0.25);
     }
   </style>
 </head>
@@ -67,4 +64,3 @@
   </div>
 </body>
 </html>
-

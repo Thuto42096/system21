@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>System21 — Engineering the Future of the Web</title>
+  <title>System21 — Web Development Studio, South Africa</title>
 
   <!-- SEO Meta Tags -->
   <meta name="description" content="System21 builds high-performance, sleek websites for startups and small businesses. Premium web development delivered in days, not months. Get your 21st century site today." />
@@ -15,8 +15,8 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://system21.co.za/" />
-  <meta property="og:title" content="System21 — Engineering the Future of the Web" />
-  <meta property="og:description" content="High-performance, sleek websites for startups and small businesses. Delivered in days, built for decades." />
+  <meta property="og:title" content="System21 — Web Development Studio, South Africa" />
+  <meta property="og:description" content="High-performance websites for startups and small businesses. Delivered in days, built to last." />
   <meta property="og:image" content="https://system21.co.za/images/og-image.png" />
   <meta property="og:locale" content="en_ZA" />
   <meta property="og:site_name" content="System21" />
@@ -24,8 +24,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://system21.co.za/" />
-  <meta name="twitter:title" content="System21 — Engineering the Future of the Web" />
-  <meta name="twitter:description" content="High-performance, sleek websites for startups and small businesses. Delivered in days, built for decades." />
+  <meta name="twitter:title" content="System21 — Web Development Studio, South Africa" />
+  <meta name="twitter:description" content="High-performance websites for startups and small businesses. Delivered in days, built to last." />
   <meta name="twitter:image" content="https://system21.co.za/images/og-image.png" />
 
   <!-- Favicon -->
@@ -33,7 +33,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="theme-color" content="#08080c" />
+  <meta name="theme-color" content="#0b0b10" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,21 +76,20 @@
   </script>
 </head>
 <body>
-  <!-- Mesh Gradient Background -->
-  <div class="mesh-bg">
-    <div class="orb orb--indigo"></div>
-    <div class="orb orb--teal"></div>
-    <div class="orb orb--violet"></div>
-    <div class="orb orb--accent"></div>
-  </div>
-
   <!-- WebGL Particle Field (Three.js) -->
   <canvas id="webgl" aria-hidden="true"></canvas>
 
   <!-- ─── NAVIGATION ─── -->
   <nav>
     <div class="nav-inner">
-      <div class="nav-logo">System<span class="gradient-text">21</span></div>
+      <div class="nav-logo">System<span class="accent-text">21</span></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#packages">Pricing</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact" class="nav-cta">Get in Touch</a>
+      </div>
       <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -102,7 +101,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" class="menu-link">About</a>
     <a href="#services" class="menu-link">Services</a>
-    <a href="#packages" class="menu-link">Packages</a>
+    <a href="#packages" class="menu-link">Pricing</a>
     <a href="#stack" class="menu-link">Stack</a>
     <a href="#contact" class="menu-link">Contact</a>
     <a href="#contact" class="menu-cta menu-link">Get in Touch</a>
@@ -112,10 +111,10 @@
   <section class="hero">
     <div class="hero-content">
       <div class="hero-badge"><span class="dot"></span>Web Studio — South Africa</div>
-      <h1 id="heroTitle">Elevate Your Business to the <span class="gradient-text">21st Century</span></h1>
-      <p>High-performance, sleek websites for startups and small businesses. Delivered in days, built for decades.</p>
+      <h1 id="heroTitle">Your business deserves a <span class="accent-text">better website</span></h1>
+      <p>We build fast, clean websites for startups and small businesses. Delivered in days, not months. No templates, no bloat.</p>
       <a href="#contact" class="hero-cta">
-        <span>Get Your <span class="gradient-text">21st</span> Century Site</span>
+        <span>Start your project</span>
         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12L12 5m0 0H6m6 0v6"/></svg>
       </a>
     </div>
@@ -127,82 +126,81 @@
 
   <!-- ─── ABOUT ─── -->
   <section class="about" id="about">
-  
     <div class="container">
-      <p class="section-label">About System21</p>
-      <h2 class="section-title">Built Today for Tomorrow.</h2>
+      <p class="section-label">About</p>
+      <h2 class="section-title">Why System21 exists</h2>
+      <p class="section-subtitle">We started System21 because too many businesses are stuck with websites that don't reflect the quality of their work.</p>
 
-      <!-- The Story Card -->
-      <div class="glass-card about-story1">
-        <div class="about-problem">
-          <h3>Is Your Business Stuck In The Past?</h3>
-          <p>In the physical world, you keep your storefront clean, your office professional, and your service top-tier.<br> But for many businesses, their "digital front door" is still stuck in 2005.<br> A clunky, slow, or outdated website isn't just a tech issue—it's a <strong>trust issue</strong>.<br> In the 21st century, if your website looks old, customers assume your thinking is, too.</p>
+      <!-- Two-column story -->
+      <div class="about-stories">
+        <div class="card about-story">
+          <h3>The problem</h3>
+          <p>Your storefront is clean, your service is sharp, but your website still looks like it was built in 2005.</p>
+          <p>A slow or outdated site isn't just a tech issue — it's a <strong>trust issue</strong>. Customers judge your business by its digital presence before they ever walk through your door.</p>
         </div>
-      </div>
-      <div class="glass-card about-story2">
-        <div class="about-philosophy">
-          <h3>Let Us Bring Your Business into the 21st Century</h3>
-          <p>We founded System21 because "good enough" isn't good enough anymore.<br> The "21" in our name is our promise:<br> To bridge the gap between where your business is today and where the modern market demands it to be.</p>
-          <p>We don't just "build websites"...<br> We engineer digital systems that reflect the quality of your work. We take the complex, high-speed tech of the 21st Century and make it work for you—simply, beautifully, and fast.</p>
+        <div class="card about-story">
+          <h3>Our approach</h3>
+          <p>We use the same tools and design standards as leading tech companies, but we build for businesses that don't have six-figure budgets.</p>
+          <p>The result: a site that's <strong>fast, professional, and built to last</strong> — without the agency price tag or the six-month timeline.</p>
         </div>
       </div>
 
       <!-- Why Choose Us -->
-      <h3 class="about-why-title">Why Choose System21?</h3>
+      <h3 class="about-why-title">What you get working with us</h3>
       <div class="about-grid">
-        <div class="glass-card about-card">
-          <div class="about-icon about-icon--speed">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <div class="card about-card">
+          <div class="about-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
-          <h4>Fast Delivery</h4>
+          <h4>Fast delivery</h4>
           <div class="about-card-image">
             <img src="images/newwebsite.png" alt="Fast Delivery">
           </div>
-          <p>Startups and small businesses don't have months to wait. We deliver premium designs in <strong>days, not months</strong>.</p>
+          <p>Your site goes live in <strong>days, not months</strong>. We move fast without cutting corners.</p>
         </div>
-        <div class="glass-card about-card">
-          <div class="about-icon about-icon--design">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <div class="card about-card">
+          <div class="about-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
-          <h4>Reliable, Responsive Design</h4>
+          <h4>Responsive, reliable design</h4>
           <div class="about-card-image">
             <img src="images/responsive.png" alt="Responsive Design">
           </div>
-          <p>We use the same high-end design language as the world's leading tech giants to give your business an instant <strong>premium feel</strong>.</p>
+          <p>Looks sharp on every screen. Built with the same design language used by <strong>leading tech companies</strong>.</p>
         </div>
-        <div class="glass-card about-card">
-          <div class="about-icon about-icon--human">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="card about-card">
+          <div class="about-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
-          <h4>Human-First Tech</h4>
+          <h4>No jargon, no surprises</h4>
           <div class="about-card-image">
             <img src="images/humantouch.png" alt="Human-First Technology">
           </div>
-          <p>We handle the "under the hood" complexity so you can focus on running your business. <strong>No jargon, no hidden fees</strong>—just a site that works as hard as you do.</p>
+          <p>We handle the complexity so you don't have to. <strong>Clear communication, honest pricing</strong>, and a site that works as hard as you do.</p>
         </div>
       </div>
 
       <!-- 3-Step Process -->
       <div class="process-section">
-        <h3 class="process-title">Your Site in 3 Simple Steps</h3>
+        <h3 class="process-title">How it works</h3>
         <div class="process-grid">
-          <div class="glass-card process-card">
+          <div class="card process-card">
             <div class="process-number">1</div>
-            <h4>The Blueprint</h4>
-            <p class="process-time">24 Hours</p>
-            <p>Strategy session & design mockup delivered. We learn your business and sketch your digital future—fast.</p>
+            <h4>Discovery</h4>
+            <p class="process-time">24 hours</p>
+            <p>We learn your business and deliver a strategy session with a design mockup — within a day.</p>
           </div>
-          <div class="glass-card process-card">
+          <div class="card process-card">
             <div class="process-number">2</div>
-            <h4>The Build</h4>
-            <p class="process-time">7-10 Days</p>
-            <p>Rapid development on our high-performance stack. Your site takes shape with daily progress updates.</p>
+            <h4>Build</h4>
+            <p class="process-time">7–10 days</p>
+            <p>Rapid development with daily progress updates. Your site takes shape on a modern tech stack.</p>
           </div>
-          <div class="glass-card process-card">
+          <div class="card process-card">
             <div class="process-number">3</div>
-            <h4>The Launch</h4>
-            <p class="process-time">Under 14 Days</p>
-            <p>Full deployment, SEO optimization, and handoff. You're live and ready to impress—in under two weeks.</p>
+            <h4>Launch</h4>
+            <p class="process-time">Under 14 days</p>
+            <p>Full deployment, SEO setup, and handoff. You're live and ready — in under two weeks.</p>
           </div>
         </div>
       </div>
@@ -212,76 +210,53 @@
   <!-- ─── SERVICES ─── -->
   <section class="services" id="services">
     <div class="container">
-      <p class="section-label">What We Do</p>
-      <h2 class="section-title">Precision-Built Digital Products</h2>
+      <p class="section-label">Services</p>
+      <h2 class="section-title">What we build</h2>
+      <p class="section-subtitle">From single-page sites to full-stack applications — always fast, always clean.</p>
       <div class="services-grid">
         <!-- Full-Stack -->
-        <div class="glass-card service-card">
-          <div class="service-badge-carousel service-badge-carousel--indigo">
-            <div class="service-badge-track">
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>React</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/></svg>Next.js</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3z"/></svg>TypeScript</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 17c.523-2.26 2.073-3.727 3.337-4.883.468-.428.882-.848 1.234-1.312.298-.39.553-.839.712-1.25z"/></svg>Node.js</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>React</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/></svg>Next.js</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3z"/></svg>TypeScript</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 17c.523-2.26 2.073-3.727 3.337-4.883.468-.428.882-.848 1.234-1.312.298-.39.553-.839.712-1.25z"/></svg>Node.js</span>
-            </div>
+        <div class="card service-card">
+          <div class="service-tags">
+            <span class="service-tag">React</span>
+            <span class="service-tag">Next.js</span>
+            <span class="service-tag">TypeScript</span>
+            <span class="service-tag">Node.js</span>
           </div>
-          <h3>Full-Stack Development</h3>
-          <p>End-to-end architecture from API design to pixel-perfect interfaces, built for scale and speed.</p>
+          <h3>Full-stack development</h3>
+          <p>End-to-end architecture from API design to pixel-perfect interfaces. Built for performance and long-term maintainability.</p>
         </div>
         <!-- UI/UX -->
-        <div class="glass-card service-card">
-          <div class="service-badge-carousel service-badge-carousel--teal">
-            <div class="service-badge-track">
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Figma</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.236-2.236 2.236 2.236 0 0 1 2.235 2.236z"/></svg>Tailwind</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>CSS3</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Framer</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Figma</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.236-2.236 2.236 2.236 0 0 1 2.235 2.236z"/></svg>Tailwind</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>CSS3</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Framer</span>
-            </div>
+        <div class="card service-card">
+          <div class="service-tags">
+            <span class="service-tag">Figma</span>
+            <span class="service-tag">Tailwind</span>
+            <span class="service-tag">CSS3</span>
+            <span class="service-tag">Framer</span>
           </div>
-          <h3>UI/UX Design</h3>
-          <p>Research-driven interfaces that balance aesthetic beauty with intuitive, accessible user flows.</p>
+          <h3>UI/UX design</h3>
+          <p>Research-driven interfaces that balance clean aesthetics with intuitive, accessible user flows.</p>
         </div>
         <!-- Cloud -->
-        <div class="glass-card service-card">
-          <div class="service-badge-carousel service-badge-carousel--violet">
-            <div class="service-badge-track">
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.527.099C6.955-.744.942 3.9.099 10.473c-.843 6.572 3.8 12.584 10.373 13.428 6.573.843 12.587-3.801 13.428-10.374C24.744 6.955 20.101.943 13.527.099z"/></svg>AWS</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 17H6.106L12 5.69 17.894 17z"/></svg>GCP</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Docker</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Azure</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.527.099C6.955-.744.942 3.9.099 10.473c-.843 6.572 3.8 12.584 10.373 13.428 6.573.843 12.587-3.801 13.428-10.374C24.744 6.955 20.101.943 13.527.099z"/></svg>AWS</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 17H6.106L12 5.69 17.894 17z"/></svg>GCP</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Docker</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Azure</span>
-            </div>
+        <div class="card service-card">
+          <div class="service-tags">
+            <span class="service-tag">AWS</span>
+            <span class="service-tag">GCP</span>
+            <span class="service-tag">Docker</span>
+            <span class="service-tag">Azure</span>
           </div>
-          <h3>Cloud Systems</h3>
-          <p>Resilient cloud infrastructure, CI/CD pipelines, and serverless architectures on AWS, GCP &amp; Azure.</p>
+          <h3>Cloud &amp; hosting</h3>
+          <p>Reliable cloud infrastructure, CI/CD pipelines, and serverless architectures — deployed and managed for you.</p>
         </div>
         <!-- Automation -->
-        <div class="glass-card service-card">
-          <div class="service-badge-carousel service-badge-carousel--amber">
-            <div class="service-badge-track">
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Zapier</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>n8n</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3z"/></svg>Make</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Python</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Zapier</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>n8n</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h18v18H3V3z"/></svg>Make</span>
-              <span class="service-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>Python</span>
-            </div>
+        <div class="card service-card">
+          <div class="service-tags">
+            <span class="service-tag">Zapier</span>
+            <span class="service-tag">n8n</span>
+            <span class="service-tag">Make</span>
+            <span class="service-tag">Python</span>
           </div>
           <h3>Automation</h3>
-          <p>Streamline your workflows with intelligent automation. From data syncing to task scheduling, we eliminate repetitive work.</p>
+          <p>Streamline repetitive work with smart automation — from data syncing to task scheduling and notifications.</p>
         </div>
       </div>
     </div>
@@ -291,12 +266,12 @@
   <section class="packages" id="packages">
     <div class="container">
       <p class="section-label">Pricing</p>
-      <h2 class="section-title">Choose Your Package</h2>
-      <p class="packages-subtitle">Transparent pricing. No hidden fees. Just results.</p>
+      <h2 class="section-title">Straightforward packages</h2>
+      <p class="section-subtitle">Transparent pricing. No hidden fees. Pick a plan or get in touch for something custom.</p>
 
       <div class="packages-grid">
-        <!-- Basic Package -->
-        <div class="glass-card package-card">
+        <!-- Basic -->
+        <div class="card package-card">
           <div class="package-header">
             <h3>Basic</h3>
             <p class="package-tagline">Perfect for getting started</p>
@@ -306,18 +281,18 @@
             <span class="amount">1,500</span>
           </div>
           <ul class="package-features">
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>1 Page Website</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 Sections</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Mobile Responsive</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Contact Form</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Basic SEO Setup</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>5-Day Delivery</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>1 Page Website</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Up to 3 Sections</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Mobile Responsive</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Contact Form</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Basic SEO Setup</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>5-Day Delivery</li>
           </ul>
           <a href="#contact" class="package-cta">Get Started</a>
         </div>
 
-        <!-- Professional Package -->
-        <div class="glass-card package-card package-card--featured">
+        <!-- Professional -->
+        <div class="card package-card package-card--featured">
           <div class="package-badge">Most Popular</div>
           <div class="package-header">
             <h3>Professional</h3>
@@ -328,20 +303,20 @@
             <span class="amount">3,500</span>
           </div>
           <ul class="package-features">
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Up to 5 Pages</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Sections</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Mobile Responsive</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Contact Form + CRM Integration</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Advanced SEO Optimization</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Google Analytics Setup</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Social Media Integration</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>7-Day Delivery</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Up to 5 Pages</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Unlimited Sections</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Mobile Responsive</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Contact Form + CRM Integration</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Advanced SEO Optimization</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Google Analytics Setup</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Social Media Integration</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>7-Day Delivery</li>
           </ul>
           <a href="#contact" class="package-cta package-cta--featured">Get Started</a>
         </div>
 
-        <!-- Premium Package -->
-        <div class="glass-card package-card">
+        <!-- Premium -->
+        <div class="card package-card">
           <div class="package-header">
             <h3>Premium</h3>
             <p class="package-tagline">Full digital transformation</p>
@@ -351,14 +326,14 @@
             <span class="amount">7,500</span>
           </div>
           <ul class="package-features">
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Up to 10 Pages</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Custom Design & Branding</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>E-commerce Ready (up to 20 products)</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Blog/News Section</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Priority Support (30 days)</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Performance Optimization</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Training Session Included</li>
-            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>10-14 Day Delivery</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Up to 10 Pages</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Custom Design &amp; Branding</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>E-commerce Ready (up to 20 products)</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Blog/News Section</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Priority Support (30 days)</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Performance Optimization</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Training Session Included</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>10-14 Day Delivery</li>
           </ul>
           <a href="#contact" class="package-cta">Get Started</a>
         </div>
@@ -372,7 +347,7 @@
   <section class="tech-stack" id="stack">
     <div class="container">
       <p class="section-label">Our Stack</p>
-      <h2 class="section-title">Technologies We Master</h2>
+      <h2 class="section-title">Tools we work with</h2>
     </div>
     <div class="marquee-wrapper">
       <div class="marquee-track">
@@ -406,10 +381,10 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-top">
-          <div class="footer-logo">System<span class="gradient-text">21</span></div>
+          <div class="footer-logo">System<span class="accent-text">21</span></div>
           <nav class="footer-links" aria-label="Footer navigation">
             <a href="#services">Services</a>
-            <a href="#packages">Packages</a>
+            <a href="#packages">Pricing</a>
             <a href="#stack">Stack</a>
             <a href="mailto:info@system21.co.za" aria-label="Email us">Email</a>
             <a href="https://linkedin.com/company/system21" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
@@ -419,7 +394,7 @@
         <div class="footer-divider"></div>
         <div class="footer-bottom">
           <p>&copy; 2026 System21. All rights reserved.</p>
-          <p>Crafted with precision in South Africa.</p>
+          <p>Crafted in South Africa.</p>
         </div>
       </div>
     </div>
